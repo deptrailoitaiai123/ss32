@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Book {
+        constructor(author, name) {
+          this.author = author;
+          this.name = name;
+        }
+      }
+
+      let books = [
+        new Book("ballack", "cdm"),
+        new Book("vandersa", "gk"),
+        new Book("maldini", "cb"),
+      ];
+
+      let ui = prompt("nhap ten author");
+      let check = 0;
+
+      for (let i = 0; i < books.length; i++) {
+        if (books[i].author === ui) {
+          console.log(books[i]);
+          break;
+        }
+      }
+
+      if (check !== 0) {
+        console.log("ko tìm thấy");
+      }
+      console;
+    </script>
+  </body>
+</html>

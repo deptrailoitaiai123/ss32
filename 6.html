@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Product {
+        constructor(id, productName, price) {
+          this.id = id;
+          this.productName = productName;
+          this.price = price;
+        }
+      }
+
+      let phone = [
+        new Product(1, "iPhone12", 20000000),
+        new Product(2, "iPhone11", 10000000),
+        new Product(3, "Samsung Note 10", 50000000),
+      ];
+
+      function sorting() {
+        for (let i = 0; i < phone.length - 1; i++) {
+          for (let j = 0; j < phone.length - i - 1; j++) {
+            if (phone[j].price > phone[j + 1].price) {
+              let temp = phone[j].price;
+              phone[j].price = phone[j + 1].price;
+              phone[j + 1].price = temp;
+            }
+          }
+        }
+      }
+
+      sorting();
+      console.log(phone);
+    </script>
+  </body>
+</html>

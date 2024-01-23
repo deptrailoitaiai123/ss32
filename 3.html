@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let ui = parseInt(prompt("moi nhap so luong sinh vien"));
+      let students = [];
+      for (let i = 0; i < ui; i++) {
+        let id = prompt("nhap id sinh vien", i);
+        let name = prompt("nhap ten sinh vien", i);
+
+        let student = {
+          id: id,
+          name: name,
+        };
+        students.push(student);
+      }
+
+      console.log(students);
+    </script>
+  </body>
+</html>
